@@ -1,0 +1,210 @@
+/* DEMO STYLE */
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+    box-sizing: border-box;
+}
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+h4{
+    color:white;
+}
+hr{
+    background:white;
+}
+a:hover, a:focus {
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size:16px;
+    border-radius:4px;
+    border:1px solid teal;
+    background:white;
+    color:teal;
+}
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.navbar-btn {
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+.line {
+    width: 100%;
+    height: 1px;
+    margin: 40px 0;
+}
+i, span {
+    display: inline-block;
+}
+a{
+    color:#cfe2e4;
+    font-size:16px;
+    padding:3px;
+}
+input{
+    border: 1px solid white;
+    border-radius: 5px;
+    padding:4px;
+    color: teal;
+}
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
+/* --------------------------------------------------- SIDEBAR STYLE ----------------------------------------------------- */
+.raised {
+    display: inline-block;
+    position: relative;
+}
+.credits{
+    font-size: 10px;
+}
+.header-description{
+    font-size:16px;
+    color:lightgray;
+}
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+#sidebar {
+    font-family: 'Poppins', sans-serif;
+    min-width: 300px;
+    max-width: 300px;
+    padding:10px;
+    background: teal;
+    transition: all 0.3s;
+    overflow: scroll;
+    z-index:100;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-left: 2px solid rgba(128, 128, 128,0.4);
+    font-size:16px;
+}
+#sidebar.active {
+    min-width: 80px;
+    max-width: 80px;
+    background: teal;
+}
+#sidebar.active .nav-wrapper{
+    padding-left:40px;
+}
+.sidebar-header{
+    text-align: center;
+    padding:10px;
+    font-size:20px;
+}
+a.article, a.article:hover {
+    background: #6d7fcc;
+    color: #fff;
+}
+.nav-wrapper{
+    padding-left:10px;
+}
+/* set position to relative, this is for the keyword textbox parent */
+#search-box{
+    position:relative;
+    padding:20px;
+    background: inherit;
+    color: white;
+}
+/* style the keyword box contains list of keyword items */
+#keyword-list{
+    position:absolute;
+    width:250px;
+    border:solid 1px #ccc;
+    box-shadow: 4px 6px 11px 0px rgba(87,87,84,0.8);
+    color: teal;
+    background:#fff;
+    top:42px;
+    left:62px;
+}
+/* style the keyword item row */
+.keyword-item{
+    padding:5px;
+    border-bottom:solid 1px #f2f7f9;
+    cursor:pointer;
+}
+/* When hovering the keyword item, change the background color */
+.keyword-item:hover{
+    background:#f1fafd;
+}
+.iw-title {
+    font-size: 15px;
+    color: teal;
+}
+.iw-cuisine {
+    font-size:13px;
+    font-weight: bold;
+    color:teal;
+}
+.iw-address {
+    margin: 2px;
+    font-size: 12px;
+}
+.iw-cost {
+    padding:2px;
+    font-size:12px;
+    border-radius: 2px;
+    border: 1px solid white;
+    color:firebrick;
+    font-weight: 400;
+}
+.iw-rating {
+    padding:2px;
+    font-size:12px;
+    border-radius: 2px;
+    border: 1px solid white;
+    color: teal;
+    font-weight: 400;
+}
+@media (max-width: 768px) {
+    .search {
+        font-size: .7em;
+        margin-top: 5px;
+   }
+}
+.map_error {
+    color: white;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+/* --------------------------------------------------- CONTENT STYLE ----------------------------------------------------- */
+#content {
+    width: calc(100vw);
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    z-index:10;
+}
+/* --------------------------------------------------- MEDIAQUERIES ----------------------------------------------------- */
+@media (max-width: 768px) {
+    #sidebar.active {
+        min-width:60px;
+        max-width: 60px;
+   }
+    #sidebar.active .nav-wrapper{
+        padding-left:40px;
+   }
+    #sidebar {
+        margin-left: 0;
+   }
+    #sidebarCollapse span {
+        display: none;
+   }
+}
