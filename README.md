@@ -1,37 +1,46 @@
-## Welcome to GitHub Pages
+# RESTO FINDER
+RESTO FINDER is a web assistant app that allows you to browse restaurants in your neighborhood and allows you to search both by cuisine or by restaurant name. The application can be customized to deliver the best restaurants (i.e. those with the best ratings) or the cheapest restaurants (i.e. those with the lowest prices.
 
-You can use the [editor on GitHub](https://github.com/monty-nietzsche/resto-finder-app/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Technology:
+The app uses:
+- Javascript framework: `knockout.js`
+- APIs: `Google Maps` and `Zomato API`from [Zomato.com](https://developers.zomato.com/api)
+- Front-end library: `Bootstrap`
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Code
+The code is composed of 5 files:
+- HTML: `index.html` 
+- CSS: `style.css` 
+- JS : `knockout-3.4.2.js` which loads the knockout.js framework
+       `app.js` main application file
+       `restaurant.class.js`which contains the class restaurant with its properties and methods
+       `google.styles.js` which contains customized styles for the Google Maps component.
 
-### Markdown
+## Features
+**RESTO FINDER** is an web app that assists you in finding the optimal restaurant for your preferences. Its main features are:
+- It inially loads the 40 restaurants with the highest ratings in the city of Boston and place for each restaurant a marker on the map.
+- You can search among the list of restaurants for the restaurant of your choice and show its properties.
+- You can search restaurants offering a given cuisine. You can browse a list of cuisines and select one of them. Once selected, the app reacts by displaying markers on the map of all restaurants offering your chosen cuisine.
+- By clicking on a marker on the map, an information window pops up where you can read the name of the restaurant, its address, its rating, the price for two as well as the different cuisines it offers. 
+- The app is fully responsive and works on different screens.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## APIs
+Google Maps API is used here to show the map and generate the markers etc.
+Zomato API is used to provide information about the nearby restaurants in Boston as well as all information about them such as rating, price for two, address and so on. Unfortunately, Zomato does not provide photos for the restaurants.
 
-```markdown
-Syntax highlighted code block
+## Installation and test drive
+Download this repository, unzip it and then open the index.html file in your favorite browser.
+You can run the application for a different city than Boston by changing the variables starting by `currentCity` in `app,js`:
+`currentCity_name` for the name of the city, `currentCity_lat` and `currentCity_lng` for the latitude and longitude coordinates of the city, `currentCity_zid` which is the Zomato id of your city. You can find the Zomato id of you city by visiting [Zomato documentation](https://developers.zomato.com/documentation).
 
-# Header 1
-## Header 2
-### Header 3
+For instance, you can try to run the app for the city of New York. Use the following details:
+`currentCity_name = "New York`;
+`currentCity_lat=40.758896`
+`currentCity_lng= -73.985130`
+`currentCity_zid=280`
 
-- Bulleted
-- List
+##  Check the App live!
+You can use RESTO FINDER  [here](http://bit.ly/nmp-uda).
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/monty-nietzsche/resto-finder-app/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Others:
+In the early development phases of this project, I  was inspired by gmawji neighborhood map project that you can find [here](https://bit.ly/2IwW4Th). Thanks gmawji!
