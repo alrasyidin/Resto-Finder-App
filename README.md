@@ -40,7 +40,7 @@ For instance, you can try to run the app for the city of New York. Use the follo
 `currentCity_zid=280`
 
 ##  Check the App live!
-You can use RESTO FINDER  [here](https://bit.ly/2zJTuq4).
+You can use RESTO FINDER  [here](https://monty-nietzsche.github.io/Resto-Finder-App/).
 
 ## Others:
 In the early development phases of this project, I  was inspired by gmawji neighborhood map project that you can find [here](https://bit.ly/2IwW4Th). Thanks gmawji!
